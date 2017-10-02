@@ -1,8 +1,8 @@
 package model;
 
-import control.ListaFichas;
+import java.util.List;
 
 public interface Criterio {
-    public Ficha puxa (ListaFichas lista);
+    public Ficha puxa (List<Ficha> listnre,List<Ficha> listpre,List<Ficha> listnfe,List<Ficha> listpfe);
     public String getTipo();
 }

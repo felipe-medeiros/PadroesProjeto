@@ -2,28 +2,30 @@ package model;
 
 import control.ListaFichas;
 
+import java.util.List;
+
 public class Criterio03 implements Criterio {
     private int controle = 1;
     private String tipo = "criterio03";
 
     @Override
-    public Ficha puxa(ListaFichas lista) {
+    public Ficha puxa(List<Ficha> listnre, List<Ficha> listpre, List<Ficha> listnfe, List<Ficha> listpfe) {
 
         if((controle%4) == 0) {
-            Ficha ficha = lista.getNre().get(0);
-            lista.removerFicha("nre",ficha.getNumero());
+            Ficha ficha = listnre.get(0);
+            listnre.remove(0);
             controle++;
             return ficha;
         }
         else if((controle%2) == 0 || (controle%3) == 0) {
-            Ficha ficha = lista.getPre().get(0);
-            lista.removerFicha("pre",ficha.getNumero());
+            Ficha ficha = listpre.get(0);
+            listpre.remove(0);
             controle++;
             return ficha;
         }
         else{
-            Ficha ficha = lista.getPfe().get(0);
-            lista.removerFicha("pfe",ficha.getNumero());
+            Ficha ficha = listpfe.get(0);
+            listpfe.remove(0);
             controle++;
             return ficha;
         }

@@ -2,25 +2,35 @@ package view;
 
 import control.ListaFichas;
 import model.Ficha;
+import java.util.List;
 
 public class Teste {
     public static void main(String[] args){
-        ListaFichas Lf = new ListaFichas();
 
         for(int i=0;i<5;i++){
-            Lf.adicionarFicha("nre");
+            ListaFichas.adicionarFicha("nre");
         }
         for(int i=0;i<5;i++){
-            Lf.adicionarFicha("nfe");
+            ListaFichas.adicionarFicha("nfe");
         }
         for(int i=0;i<5;i++){
-            Lf.adicionarFicha("pre");
+            ListaFichas.adicionarFicha("pre");
         }
         for(int i=0;i<5;i++){
-            Lf.adicionarFicha("pfe");
+            ListaFichas.adicionarFicha("pfe");
         }
 
-        Lf.toString();
+        System.out.println(ListaFichas.getCriterio());
 
+        System.out.println(ListaFichas.chamarProximo().toString());
+        System.out.println(ListaFichas.chamarProximo().toString());
+        System.out.println(ListaFichas.chamarProximo().toString());
+        System.out.println(ListaFichas.chamarProximo().toString());
+        System.out.println(ListaFichas.chamarProximo().toString());
+
+        ListaFichas.mudarCriterio(3);
+        System.out.println(ListaFichas.getCriterio());
+        System.out.println(ListaFichas.chamarProximo().toString());
+        System.out.println(ListaFichas.chamarProximo().toString());
     }
 }

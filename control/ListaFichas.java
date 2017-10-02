@@ -2,15 +2,16 @@ package control;
 
 import model.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class ListaFichas {
 
-    private static List<Ficha> nfe;
-    private static List<Ficha> pfe;
-    private static List<Ficha> pre;
-    private static List<Ficha> nre;
-    private Criterio criterio = new Criterio01();
+    private static List<Ficha> nfe = new ArrayList<>();
+    private static List<Ficha> pfe = new ArrayList<>();
+    private static List<Ficha> pre = new ArrayList<>();
+    private static List<Ficha> nre = new ArrayList<>();
+    private static Criterio criterio = new Criterio01();
     private static int numero_ficha=0;
 
     public static void adicionarFicha(String tipo) {
@@ -32,7 +33,7 @@ public abstract class ListaFichas {
         }
     }
 
-    public void removerFicha(String tipo, int numero) {
+    public static void removerFicha(String tipo, int numero) {
 
         switch (tipo) {
         case "nfe":
@@ -62,11 +63,11 @@ public abstract class ListaFichas {
         }
     }
 
-    public Ficha chamarProximo(){
-        return criterio.puxa(this);
+    public static Ficha chamarProximo(){
+        return criterio.puxa(nre,pre,nfe,pfe);
     }
 
-    public void mudarCriterio (int i) {
+    public static void mudarCriterio (int i) {
         switch (i){
         case 1:
             criterio = new Criterio01();
@@ -83,37 +84,55 @@ public abstract class ListaFichas {
         }
     }
 
-    public List<Ficha> getNfe() {
+    public static List<Ficha> getNfe() {
         return nfe;
     }
 
-    public List<Ficha> getPfe() {
+    public static List<Ficha> getPfe() {
         return pfe;
     }
 
-    public List<Ficha> getPre() {
+    public static List<Ficha> getPre() {
         return pre;
     }
 
-    public List<Ficha> getNre() {
+    public static List<Ficha> getNre() {
         return nre;
     }
 
-    public Criterio getCriterio() {
-        return this.criterio.getTipo();
+    public static String getCriterio() {
+        return criterio.getTipo();
     }
 
-    public void setCriterio(Criterio criterio) {
-        this.criterio = criterio;
+    public static void setCriterio(Criterio novo_criterio) {
+        criterio = novo_criterio;
     }
 
-    @Override
-    public String toString() {
-        return "ListaFichas{" +
-                "nfe=" + nfe +
-                ", pfe=" + pfe +
-                ", pre=" + pre +
-                ", nre=" + nre +
-                '}';
+    public static String listaNre(){
+        String texto = "";
+        for(Ficha f: nre)
+            texto += f.toString();
+        return texto;
+    }
+
+    public static String listaNfe(){
+        String texto = "";
+        for(Ficha f: nfe)
+            texto += f.toString();
+        return texto;
+    }
+
+    public static String listaPre(){
+        String texto = "";
+        for(Ficha f: pre)
+            texto += f.toString();
+        return texto;
+    }
+
+    public static String listaPfe(){
+        String texto = "";
+        for(Ficha f: pfe)
+            texto += f.toString();
+        return texto;
     }
 }

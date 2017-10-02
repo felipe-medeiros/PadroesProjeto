@@ -24,4 +24,12 @@ public class Ficha {
     public void setNumero(int numero) {
         this.numero = numero;
     }
+
+    @Override
+    public String toString() {
+        return "Ficha{" +
+                "numero=" + numero +
+                ", tipo='" + tipo + '\'' +
+                '}';
+    }
 }
