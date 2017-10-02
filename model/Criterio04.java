@@ -1,7 +1,5 @@
 package model;
 
-import control.ListaFichas;
-
 import java.util.List;
 
 public class Criterio04 implements Criterio {

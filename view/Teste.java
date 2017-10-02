@@ -1,8 +1,6 @@
 package view;
 
 import control.ListaFichas;
-import model.Ficha;
-import java.util.List;
 
 public class Teste {
     public static void main(String[] args){
