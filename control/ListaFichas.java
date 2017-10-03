@@ -63,8 +63,11 @@ public abstract class ListaFichas {
         }
     }
 
-    public static Ficha chamarProximo(){
-        return criterio.puxa(nre,pre,nfe,pfe);
+    public static Ficha chamarProximo() {
+        Ficha ficha = criterio.puxa(nre,pre,nfe,pfe);
+//        if (ficha == null)
+//            throw new Exception("Fila sem fichas, mude o critério.");
+        return ficha;
     }
 
     public static void mudarCriterio (int i) {

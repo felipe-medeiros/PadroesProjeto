@@ -9,6 +9,23 @@ public class Criterio03 implements Criterio {
     @Override
     public Ficha puxa(List<Ficha> listnre, List<Ficha> listpre, List<Ficha> listnfe, List<Ficha> listpfe) {
 
+        if (listpre.size()==0 && listpfe.size()==0){
+            Ficha ficha = listnre.get(0);
+            listnre.remove(0);
+            controle++;
+            return ficha;
+        }else if (listnre.size()==0 && listpfe.size()==0){
+            Ficha ficha = listpre.get(0);
+            listpre.remove(0);
+            controle++;
+            return ficha;
+        }else if (listnre.size()==0 && listpre.size()==0){
+            Ficha ficha = listpfe.get(0);
+            listpfe.remove(0);
+            controle++;
+            return ficha;
+        }
+
         if((controle%4) == 0) {
             Ficha ficha = listnre.get(0);
             listnre.remove(0);
