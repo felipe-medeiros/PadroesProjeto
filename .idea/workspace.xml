@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dca87868-7c35-4904-8dbd-5d6502c56c06" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ExercicioGrasp/controller/Hotel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ExercicioGrasp/model/Boleto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ExercicioGrasp/model/Cidade.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ExercicioGrasp/model/Credito.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ExercicioGrasp/model/Pagamento.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ExercicioGrasp/model/Quarto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ExercicioGrasp/model/Reserva.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ExercicioGrasp/model/Tipo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ExercicioGrasp/view/Sistema.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/controller/Hotel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/model/Boleto.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/model/Cidade.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/model/Credito.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/model/Pagamento.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/model/Quarto.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/model/Reserva.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/model/Tipo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/view/Sistema.java" afterPath="" />
+    <list default="true" id="fd507f7b-1927-4831-9289-dc498cb9cf14" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExercicioGrasp/.idea/ExercicioGrasp.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExercicioGrasp/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExercicioGrasp/out/production/ExercicioGrasp/controller/Hotel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExercicioGrasp/out/production/ExercicioGrasp/model/Boleto.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExercicioGrasp/out/production/ExercicioGrasp/model/Cidade.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExercicioGrasp/out/production/ExercicioGrasp/model/Credito.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExercicioGrasp/out/production/ExercicioGrasp/model/Pagamento.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExercicioGrasp/out/production/ExercicioGrasp/model/Quarto.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExercicioGrasp/out/production/ExercicioGrasp/model/Reserva.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExercicioGrasp/out/production/ExercicioGrasp/model/Tipo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExercicioGrasp/out/production/ExercicioGrasp/view/Sistema.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExercicioGrasp/src/controller/Hotel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExercicioGrasp/src/model/Boleto.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExercicioGrasp/src/model/Cidade.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExercicioGrasp/src/model/Credito.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExercicioGrasp/src/model/Pagamento.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExercicioGrasp/src/model/Quarto.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExercicioGrasp/src/model/Reserva.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExercicioGrasp/src/model/Tipo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ExercicioGrasp/src/view/Sistema.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ExercicioGrasp/.idea/workspace.xml" afterPath="$PROJECT_DIR$/ExercicioGrasp/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,15 +35,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
+    <leaf>
+      <file leaf-file-name="Sistema.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/view/Sistema.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,37 +56,11 @@
       <projects_view />
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/model/Pagamento.java" />
-        <option value="$PROJECT_DIR$/src/model/Credito.java" />
-        <option value="$PROJECT_DIR$/src/model/Boleto.java" />
-        <option value="$PROJECT_DIR$/src/controller/Controller.java" />
-        <option value="$PROJECT_DIR$/src/model/Hotel.java" />
-        <option value="$PROJECT_DIR$/src/model/Tipo.java" />
-        <option value="$PROJECT_DIR$/src/model/Cidade.java" />
-        <option value="$PROJECT_DIR$/src/view/Sistema.java" />
-        <option value="$PROJECT_DIR$/src/model/Reserva.java" />
-        <option value="$PROJECT_DIR$/src/model/Quarto.java" />
-        <option value="$PROJECT_DIR$/src/controller/Hotel.java" />
-      </list>
-    </option>
-  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="24" />
-    <option name="width" value="1400" />
-    <option name="height" value="1028" />
-  </component>
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -96,37 +77,37 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="ExercicioGrasp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Padroes de Projeto" type="462c0819:PsiDirectoryNode" />
+              <item name="PadroesProjeto" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ExercicioGrasp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Padroes de Projeto" type="462c0819:PsiDirectoryNode" />
+              <item name="PadroesProjeto" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ExercicioGrasp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Padroes de Projeto" type="462c0819:PsiDirectoryNode" />
+              <item name="PadroesProjeto" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ExercicioGrasp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Padroes de Projeto" type="462c0819:PsiDirectoryNode" />
+              <item name="PadroesProjeto" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ExercicioGrasp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Padroes de Projeto" type="462c0819:PsiDirectoryNode" />
+              <item name="PadroesProjeto" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -139,12 +120,6 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ExercicioGrasp" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="controller" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -268,57 +243,50 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="dca87868-7c35-4904-8dbd-5d6502c56c06" name="Default" comment="" />
-      <created>1508413739524</created>
+      <changelist id="fd507f7b-1927-4831-9289-dc498cb9cf14" name="Default" comment="" />
+      <created>1508507390393</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1508413739524</updated>
-      <workItem from="1508413745007" duration="16089000" />
-      <workItem from="1508501471114" duration="3245000" />
-      <workItem from="1508506600591" duration="49000" />
-      <workItem from="1508506682983" duration="26000" />
-      <workItem from="1508506723508" duration="62000" />
+      <updated>1508507390393</updated>
+      <workItem from="1508507394857" duration="126000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19471000" />
+    <option name="totallyTimeSpent" value="126000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="260" y="24" width="1865" height="1092" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22290389" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15244229" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14009662" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,28 +300,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/controller/Hotel.java" />
-    <entry file="file://$PROJECT_DIR$/src/model/Reserva.java" />
-    <entry file="file://$PROJECT_DIR$/src/model/Tipo.java" />
-    <entry file="file://$PROJECT_DIR$/src/view/Sistema.java" />
-    <entry file="file://$PROJECT_DIR$/ExercicioGrasp.iml" />
-    <entry file="file://$PROJECT_DIR$/src/model/Pagamento.java" />
-    <entry file="file://$PROJECT_DIR$/src/model/Boleto.java" />
-    <entry file="file://$PROJECT_DIR$/src/model/Credito.java" />
-    <entry file="file://$PROJECT_DIR$/src/controller/Controller.java" />
-    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/util/ArrayList.class">
+    <entry file="file://$PROJECT_DIR$/src/view/Sistema.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="190" column="0" lean-forward="false" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+        <state relative-caret-position="88">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Tipo.java" />
-    <entry file="file://$PROJECT_DIR$/src/model/Cidade.java" />
-    <entry file="file://$PROJECT_DIR$/src/view/Sistema.java" />
-    <entry file="file://$PROJECT_DIR$/src/model/Reserva.java" />
-    <entry file="file://$PROJECT_DIR$/src/model/Quarto.java" />
-    <entry file="file://$PROJECT_DIR$/src/controller/Hotel.java" />
   </component>
   <component name="masterDetails">
     <states>
