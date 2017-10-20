@@ -1,12 +1,28 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Quarto {
     private int id;
     private Tipo tipo;
+    public List<Reserva> reservas = new ArrayList<>();
 
     public Quarto(int id,Tipo tipo){
         this.id = id;
         this.tipo = tipo;
+    }
+
+    public void adicionarReserva(Reserva reserva){
+        reservas.add(reserva);
+    }
+
+    public List<Reserva> getReservas() {
+        return reservas;
+    }
+
+    public void setReservas(List<Reserva> reservas) {
+        this.reservas = reservas;
     }
 
     public int getId() {
@@ -30,6 +46,7 @@ public class Quarto {
         return "Quarto{" +
                 "id=" + id +
                 ", tipo=" + tipo +
+                ", reservas=" + reservas +
                 '}';
     }
 }

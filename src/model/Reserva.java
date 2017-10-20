@@ -6,12 +6,10 @@ public class Reserva {
     private int id;
     private Date entrada;
     private Date saida;
-    private Quarto quarto;
 
     public Reserva(int id,Date entrada,Date saida,Quarto quarto){
         this.entrada = entrada;
         this.id = id;
-        this.quarto = quarto;
         this.saida = saida;
     }
 
@@ -39,21 +37,12 @@ public class Reserva {
         this.saida = saida;
     }
 
-    public Quarto getQuarto() {
-        return quarto;
-    }
-
-    public void setQuarto(Quarto quarto) {
-        this.quarto = quarto;
-    }
-
     @Override
     public String toString() {
         return "Reserva{" +
                 "id=" + id +
                 ", entrada=" + entrada +
                 ", saida=" + saida +
-                ", quarto=" + quarto.toString() +
                 '}';
     }
 }

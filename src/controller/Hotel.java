@@ -17,7 +17,6 @@ public class Hotel {
     private Double distancia;
     private List<Quarto> quartos = new ArrayList<>();
     private Map<Tipo,Double> valores = new HashMap<>();
-    private List<Reserva> reservas = new ArrayList<>();
 
     public Hotel(Cidade cidade,String nome,String endereco,Double distancia){
         this.cidade = cidade;
@@ -47,23 +46,29 @@ public class Hotel {
         entrada = formataData(strentrada);
         saida = formataData(strsaida);
 
-        if (reservas.size() > 0) {
-            for (Reserva r : reservas) {
-                int x = entrada.compareTo(r.getSaida());
-                int y = saida.compareTo(r.getEntrada());
+        for (Quarto q: quartos_tipo){
+            if (q.getReservas().size() == 0){
+                Reserva nova = new Reserva(++idreserva, entrada, saida, quartos_tipo.get(0));
+                q.reservas.add(nova);
+                return true;
+            } else {
+                for (Reserva r: q.getReservas()){
+                    int x = entrada.compareTo(r.getSaida());
+                    int y = saida.compareTo(r.getEntrada());
+                    int z = entrada.compareTo(r.getEntrada());
+                    int w = saida.compareTo(r.getSaida());
 
-                if (x < 0 || y < 0) {
-                    return false;
-                } else if (quartos_tipo.size() > 0) {
-                    Reserva nova = new Reserva(++idreserva, entrada, saida, quartos_tipo.get(0));
-                    reservas.add(nova);
-                    return true;
+                    if(z < 0 && y <= 0){
+                        Reserva nova = new Reserva(++idreserva, entrada, saida, quartos_tipo.get(0));
+                        q.adicionarReserva(nova);
+                        return true;
+                    } else if (x < 0 || y < 0 || z == 0 || w == 0) {
+                        return false;
+                    }
                 }
             }
         }
-        Reserva nova = new Reserva(++idreserva, entrada, saida, quartos_tipo.get(0));
-        reservas.add(nova);
-        return true;
+        return false;
     }
 
     public void definirValores(Double inicial){
@@ -145,14 +150,6 @@ public class Hotel {
         this.valores = valores;
     }
 
-    public List<Reserva> getReservas() {
-        return reservas;
-    }
-
-    public void setReservas(List<Reserva> reservas) {
-        this.reservas = reservas;
-    }
-
     @Override
     public String toString() {
         return "Hotel{" +
@@ -161,7 +158,6 @@ public class Hotel {
                 ", endereco='" + endereco + '\'' +
                 ", distancia=" + distancia +
                 ", quartos=" + quartos +
-                ", reservas=" + reservas +
                 '}';
     }
 }

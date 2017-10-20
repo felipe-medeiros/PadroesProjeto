@@ -47,7 +47,7 @@ public class Sistema {
         }
         System.out.println(hotelTambau.toString());
         try{
-            System.out.println(hotelTambau.fazerReserva(1,"01/01/2017","01/02/2017"));
+            hotelTambau.fazerReserva(1,"03/02/2017","09/02/2017");
         }catch (Exception e){
             System.out.println(e);
         }
