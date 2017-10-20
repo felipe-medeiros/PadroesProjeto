@@ -32,7 +32,6 @@ public class Hotel {
         return data;
     }
 
-
     public Boolean fazerReserva(int tipo,String strentrada,String strsaida)
         throws Exception{
 
@@ -47,7 +46,7 @@ public class Hotel {
         saida = formataData(strsaida);
 
         for (Quarto q: quartos_tipo){
-            if (q.getReservas().size() == 0){
+            if (q.getReservas().isEmpty()){
                 Reserva nova = new Reserva(++idreserva, entrada, saida, quartos_tipo.get(0));
                 q.reservas.add(nova);
                 return true;
@@ -58,12 +57,10 @@ public class Hotel {
                     int z = entrada.compareTo(r.getEntrada());
                     int w = saida.compareTo(r.getSaida());
 
-                    if(z < 0 && y <= 0){
+                    if((z < 0 && y <= 0) || (x >= 0)){
                         Reserva nova = new Reserva(++idreserva, entrada, saida, quartos_tipo.get(0));
                         q.adicionarReserva(nova);
                         return true;
-                    } else if (x < 0 || y < 0 || z == 0 || w == 0) {
-                        return false;
                     }
                 }
             }

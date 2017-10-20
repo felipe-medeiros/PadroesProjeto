@@ -45,12 +45,14 @@ public class Sistema {
         }catch (Exception e){
             System.out.println(e);
         }
-        System.out.println(hotelTambau.toString());
+        System.out.println(hotelTambau.getQuartos().get(0).toString());
+        System.out.println(hotelTambau.getQuartos().get(1).toString());
         try{
-            hotelTambau.fazerReserva(1,"03/02/2017","09/02/2017");
+            hotelTambau.fazerReserva(1,"03/02/2017","06/02/2017");
         }catch (Exception e){
             System.out.println(e);
         }
-        System.out.println(hotelTambau.toString());
+        System.out.println(hotelTambau.getQuartos().get(0).toString());
+        System.out.println(hotelTambau.getQuartos().get(1).toString());
     }
 }

@@ -1,5 +1,6 @@
 package model;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Reserva {
@@ -11,6 +12,13 @@ public class Reserva {
         this.entrada = entrada;
         this.id = id;
         this.saida = saida;
+    }
+
+    public Date formataData(String strdata) throws Exception{
+        Date data;
+        SimpleDateFormat dataFmt = new SimpleDateFormat("dd/MM/yyy");
+        data = dataFmt.parse(strdata);
+        return data;
     }
 
     public int getId() {
