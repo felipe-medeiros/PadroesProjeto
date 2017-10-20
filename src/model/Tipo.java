@@ -5,7 +5,7 @@ public enum Tipo {
 
     public int valorTipo;
 
-    private Tipo(int valor){
+    Tipo(int valor){
         valorTipo = valor;
     }
 

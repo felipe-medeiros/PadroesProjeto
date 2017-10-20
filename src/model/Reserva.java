@@ -46,4 +46,14 @@ public class Reserva {
     public void setQuarto(Quarto quarto) {
         this.quarto = quarto;
     }
+
+    @Override
+    public String toString() {
+        return "Reserva{" +
+                "id=" + id +
+                ", entrada=" + entrada +
+                ", saida=" + saida +
+                ", quarto=" + quarto.toString() +
+                '}';
+    }
 }

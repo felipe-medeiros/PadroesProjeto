@@ -24,4 +24,12 @@ public class Quarto {
     public void setTipo(Tipo tipo) {
         this.tipo = tipo;
     }
+
+    @Override
+    public String toString() {
+        return "Quarto{" +
+                "id=" + id +
+                ", tipo=" + tipo +
+                '}';
+    }
 }

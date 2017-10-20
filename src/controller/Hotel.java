@@ -11,7 +11,6 @@ import java.util.*;
 public class Hotel {
     private int idreserva=0;
     private int idquarto=0;
-    private int idcidade=0;
     private Cidade cidade;
     private String nome;
     private String endereco;
@@ -27,33 +26,142 @@ public class Hotel {
         this.distancia = distancia;
     }
 
-    public Boolean fazerReserva(int i,String strentrada,String strsaida)
+    public Date formataData(String strdata) throws Exception{
+        Date data;
+        SimpleDateFormat dataFmt = new SimpleDateFormat("dd/MM/yyy");
+        data = dataFmt.parse(strdata);
+        return data;
+    }
+
+
+    public Boolean fazerReserva(int tipo,String strentrada,String strsaida)
         throws Exception{
 
-        List<Quarto> disponiveis = new ArrayList();
-        for(Quarto q: quartos){
-            if(i == q.getTipo().valorTipo)
-                disponiveis.add(q);
+        List<Quarto> quartos_tipo = new ArrayList();
+        for(Quarto q: this.quartos){
+            if(tipo == q.getTipo().valorTipo)
+                quartos_tipo.add(q);
         }
 
         Date entrada,saida;
-        SimpleDateFormat entradaFmt = new SimpleDateFormat("dd/MM/yyy");
-        SimpleDateFormat saidaFmt = new SimpleDateFormat("dd/MM/yyy");
+        entrada = formataData(strentrada);
+        saida = formataData(strsaida);
 
-        entrada = entradaFmt.parse(strentrada);
-        saida = saidaFmt.parse(strsaida);
+        if (reservas.size() > 0) {
+            for (Reserva r : reservas) {
+                int x = entrada.compareTo(r.getSaida());
+                int y = saida.compareTo(r.getEntrada());
 
-        for(Reserva r: reservas){
-            int x = r.getSaida().compareTo(entrada);
-            int y = r.getEntrada().compareTo(saida);
-
-            if(x == -1 || y == -1){
-                return false;
-            }else if(disponiveis.size() > 0){
-                Reserva nova = new Reserva(++idreserva,entrada,saida,disponiveis.get(0));
-                return true;
+                if (x < 0 || y < 0) {
+                    return false;
+                } else if (quartos_tipo.size() > 0) {
+                    Reserva nova = new Reserva(++idreserva, entrada, saida, quartos_tipo.get(0));
+                    reservas.add(nova);
+                    return true;
+                }
             }
         }
-        return false;
+        Reserva nova = new Reserva(++idreserva, entrada, saida, quartos_tipo.get(0));
+        reservas.add(nova);
+        return true;
+    }
+
+    public void definirValores(Double inicial){
+        valores.put(Tipo.SIMPLES,inicial);
+        valores.put(Tipo.DUPLO,inicial*1.20);
+        valores.put(Tipo.TRIPLO,inicial*1.50);
+        valores.put(Tipo.PRESIDENCIAL,inicial*2);
+    }
+
+    public void criarQuarto(int id){
+        switch (id){
+            case 1:
+                Quarto quarto1 = new Quarto(++idquarto,Tipo.SIMPLES);
+                quartos.add(quarto1);
+            break;
+            case 2:
+                Quarto quarto2 = new Quarto(++idquarto,Tipo.DUPLO);
+                quartos.add(quarto2);
+            break;
+            case 3:
+                Quarto quarto3 = new Quarto(++idquarto,Tipo.TRIPLO);
+                quartos.add(quarto3);
+            break;
+            case 4:
+                Quarto quarto4 = new Quarto(++idquarto,Tipo.PRESIDENCIAL);
+                quartos.add(quarto4);
+            break;
+            default:
+                Quarto quarto5 = new Quarto(++idquarto,Tipo.SIMPLES);
+                quartos.add(quarto5);
+        }
+    }
+
+    public Cidade getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(Cidade cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public Double getDistancia() {
+        return distancia;
+    }
+
+    public void setDistancia(Double distancia) {
+        this.distancia = distancia;
+    }
+
+    public List<Quarto> getQuartos() {
+        return quartos;
+    }
+
+    public void setQuartos(List<Quarto> quartos) {
+        this.quartos = quartos;
+    }
+
+    public Map<Tipo, Double> getValores() {
+        return valores;
+    }
+
+    public void setValores(Map<Tipo, Double> valores) {
+        this.valores = valores;
+    }
+
+    public List<Reserva> getReservas() {
+        return reservas;
+    }
+
+    public void setReservas(List<Reserva> reservas) {
+        this.reservas = reservas;
+    }
+
+    @Override
+    public String toString() {
+        return "Hotel{" +
+                "cidade=" + cidade +
+                ", nome='" + nome + '\'' +
+                ", endereco='" + endereco + '\'' +
+                ", distancia=" + distancia +
+                ", quartos=" + quartos +
+                ", reservas=" + reservas +
+                '}';
     }
 }

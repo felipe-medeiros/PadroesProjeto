@@ -8,4 +8,12 @@ public class Cidade {
         this.id = id;
         this.nome = nome;
     }
+
+    @Override
+    public String toString() {
+        return "Cidade{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                '}';
+    }
 }
