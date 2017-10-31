@@ -1,12 +1,5 @@
 package model;
 
-import com.sun.org.apache.regexp.internal.RE;
-import model.Cidade;
-import model.Quarto;
-import model.Reserva;
-import model.Tipo;
-
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class Hotel {
@@ -19,73 +12,13 @@ public class Hotel {
     private List<Quarto> quartos2 = new ArrayList<>();
     private List<Quarto> quartos3 = new ArrayList<>();
     private List<Quarto> quartos4 = new ArrayList<>();
-    private Map<Tipo,Double> valores = new HashMap<>();
+    private HashMap<Tipo,Double> valores = new HashMap<>();
 
     public Hotel(Cidade cidade,String nome,String endereco,Double distancia){
         this.cidade = cidade;
         this.nome = nome;
         this.endereco = endereco;
         this.distancia = distancia;
-    }
-
-    public Double calculaPreco(Quarto quarto,String strentrada,String strsaida){
-        try{
-            Date entrada,saida;
-            entrada = formataData(strentrada);
-            saida = formataData(strsaida);
-
-            int i = saida.compareTo(entrada);
-            double unit = valores.get(quarto.getTipo());
-
-            return i*unit;
-        }catch (Exception e){}
-        return 0.0;
-    }
-
-    public Date formataData(String strdata) throws Exception{
-        Date data;
-        SimpleDateFormat dataFmt = new SimpleDateFormat("dd/MM/yyy");
-        data = dataFmt.parse(strdata);
-        return data;
-    }
-
-    public List<Quarto> quartosDisponiveis(int tipo,String strentrada,String strsaida)
-        throws Exception{
-
-        List<Quarto> quartos;
-        switch (tipo){
-            case 1:
-                quartos = this.quartos1;
-            break;
-            case 2:
-                quartos = this.quartos2;
-            break;
-            case 3:
-                quartos = this.quartos2;
-            break;
-            case 4:
-                quartos = this.quartos4;
-            break;
-            default:
-                quartos = this.quartos1;
-            break;
-        }
-
-        for (Quarto q: quartos){
-            if (q.verificaDisponibilidade(strentrada,strsaida) == null)
-                quartos.remove(q);
-        }
-        return quartos;
-    }
-
-    public void fazerReserva(int tipo,String strentrada,String strsaida){
-        try {
-            List<Quarto> quartos = quartosDisponiveis(tipo,strentrada,strsaida);
-            Date entrada, saida;
-            entrada = formataData(strentrada);
-            saida = formataData(strsaida);
-            quartos.get(0).criarReserva(entrada,saida);
-        }catch (Exception e){}
     }
 
     public void definirValores(Double inicial){
@@ -155,8 +88,36 @@ public class Hotel {
         return valores;
     }
 
-    public void setValores(Map<Tipo, Double> valores) {
-        this.valores = valores;
+    public List<Quarto> getQuartos1() {
+        return quartos1;
+    }
+
+    public void setQuartos1(List<Quarto> quartos1) {
+        this.quartos1 = quartos1;
+    }
+
+    public List<Quarto> getQuartos2() {
+        return quartos2;
+    }
+
+    public void setQuartos2(List<Quarto> quartos2) {
+        this.quartos2 = quartos2;
+    }
+
+    public List<Quarto> getQuartos3() {
+        return quartos3;
+    }
+
+    public void setQuartos3(List<Quarto> quartos3) {
+        this.quartos3 = quartos3;
+    }
+
+    public List<Quarto> getQuartos4() {
+        return quartos4;
+    }
+
+    public void setQuartos4(List<Quarto> quartos4) {
+        this.quartos4 = quartos4;
     }
 
     @Override
