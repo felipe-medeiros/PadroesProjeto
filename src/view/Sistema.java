@@ -1,15 +1,57 @@
 package view;
 
-import controller.Hotel;
+import model.Hotel;
 import model.Cidade;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Sistema {
+    public static int idcidade=0;
+    public static List<Hotel> hoteis = new ArrayList<>();
+
     public static void main(String[] args){
-        int idcidade=0;
-        List<Hotel> hoteis = new ArrayList<>();
+
+        cadastrar();
+
+        Scanner ler = new Scanner(System.in);
+        String cidade,entrada,saida;
+        double menor,maior;
+        int tipo;
+
+        hoteis(0).toString();
+
+//        System.out.println("---- BuscOtel ----\n\n");
+//        System.out.println("Cidade: ");
+//        cidade = ler.nextLine();
+//
+//        System.out.println("Data Entrada: ");
+//        entrada = ler.nextLine();
+//
+//        System.out.println("Data Saída: ");
+//        saida = ler.nextLine();
+//
+//        System.out.println("Tipo Quarto: Simples(1), Duplo(2), Triplo(3), Presidencial(4)");
+//        tipo = ler.nextInt();
+//
+//        System.out.println("Menor preço: ");
+//        menor = ler.nextDouble();
+//
+//        System.out.println("Maior preço: ");
+//        maior = ler.nextDouble();
+
+        try{
+            for(Hotel h: hoteis){
+                //h.quartosDisponiveis(tipo,entrada,saida);
+                    h.toString();
+            }
+        }catch (Exception e){
+            System.out.println(e);
+        }
+    }
+
+    public static void cadastrar(){
 
         Cidade joaopessoa = new Cidade(++idcidade,"João Pessoa");
         Cidade recife = new Cidade(++idcidade,"Recife");
@@ -32,27 +74,10 @@ public class Sistema {
             i *= 1.1;
         }
 
-//        for (Hotel h: hoteis){
-//            for (int j=0;j<10;j++){
-//                h.criarQuarto(j%3+1);
-//            }
-//        }
-
-        hotelTambau.criarQuarto(1);
-        hotelTambau.criarQuarto(1);
-        try{
-            hotelTambau.fazerReserva(1,"02/02/2017","07/02/2017");
-        }catch (Exception e){
-            System.out.println(e);
+        for (Hotel h: hoteis){
+            for (int j=0;j<10;j++){
+                h.criarQuarto(j%3+1);
+            }
         }
-        System.out.println(hotelTambau.getQuartos().get(0).toString());
-        System.out.println(hotelTambau.getQuartos().get(1).toString());
-        try{
-            hotelTambau.fazerReserva(1,"03/02/2017","06/02/2017");
-        }catch (Exception e){
-            System.out.println(e);
-        }
-        System.out.println(hotelTambau.getQuartos().get(0).toString());
-        System.out.println(hotelTambau.getQuartos().get(1).toString());
     }
 }
