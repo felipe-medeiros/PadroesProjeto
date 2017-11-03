@@ -12,8 +12,9 @@ import java.util.Date;
 import java.util.List;
 
 public abstract class Controller {
-    public static int idcidade=0;
-    public static List<Hotel> hoteis = new ArrayList<>();
+    private static int idreserva=0;
+    private static int idcidade=0;
+    private static List<Hotel> hoteis = new ArrayList<>();
 
     public static void cadastrar(){
 
@@ -46,26 +47,33 @@ public abstract class Controller {
     }
 
     public static Double calculaPreco(Hotel hotel,Quarto quarto,String strentrada,String strsaida){
+        Date entrada=null,saida=null;
         try{
-            Date entrada,saida;
             entrada = formataData(strentrada);
             saida = formataData(strsaida);
-
-            int i = saida.compareTo(entrada);
-            double unit = hotel.getValores().get(quarto.getTipo());
-            return Math.floor(i*unit);
-        }catch (Exception e){}
-        return 0.0;
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        int i = saida.compareTo(entrada);
+        double unit = hotel.getValores().get(quarto.getTipo());
+        return Math.floor(i*unit);
     }
 
-    public static void fazerReserva(Hotel hotel,int tipo,String strentrada,String strsaida){
+    public static Boolean fazerReserva(Hotel hotel,int tipo,String strentrada,String strsaida){
+        Date entrada=null, saida=null;
+        Quarto quarto=null;
         try {
-            List<Quarto> quartos = quartosDisponiveis(hotel,tipo,strentrada,strsaida);
-            Date entrada, saida;
             entrada = formataData(strentrada);
             saida = formataData(strsaida);
-            quartos.get(0).criarReserva(entrada,saida);
-        }catch (Exception e){}
+            quarto = quartoDisponivel(hotel,tipo,strentrada,strsaida);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        if(quarto==null)
+            return false;
+        Reserva nova = new Reserva(++idreserva, entrada, saida);
+        quarto.adicionarReserva(nova);
+        return true;
     }
 
     public static Date formataData(String strdata) throws Exception{
@@ -75,7 +83,7 @@ public abstract class Controller {
         return data;
     }
 
-    public static List<Quarto> quartosDisponiveis(Hotel hotel,int tipo,String strentrada,String strsaida)
+    public static Quarto quartoDisponivel(Hotel hotel,int tipo,String strentrada,String strsaida)
         throws Exception{
         List<Quarto> quartos;
         switch (tipo){
@@ -95,13 +103,11 @@ public abstract class Controller {
                 quartos = hotel.getQuartos1();
                 break;
         }
-
-        for (Quarto q: quartos){
-            if (verificaDisponibilidade(q,strentrada,strsaida) == null)
-                quartos.remove(q);
+        Quarto quarto = null;
+        for (int i=0;quarto == null && quartos.size() < i;i++){
+            quarto = verificaDisponibilidade(quartos.get(i),strentrada,strsaida);
         }
-        return quartos;
-
+        return quarto;
     }
 
     public static Quarto verificaDisponibilidade(Quarto quarto,String strentrada,String strsaida)
@@ -117,7 +123,6 @@ public abstract class Controller {
                 int x = entrada.compareTo(r.getSaida());
                 int y = saida.compareTo(r.getEntrada());
                 int z = entrada.compareTo(r.getEntrada());
-                int w = saida.compareTo(r.getSaida());
 
                 if((z < 0 && y <= 0) || (x >= 0))
                     return quarto;

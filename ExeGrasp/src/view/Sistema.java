@@ -18,6 +18,7 @@ public class Sistema {
         Controller.cadastrar();
 
         Scanner ler = new Scanner(System.in);
+        Scanner ler2 = new Scanner(System.in);
         String cidade,entrada,saida;
         double menor,maior;
         int tipo;
@@ -46,16 +47,16 @@ public class Sistema {
             for(Hotel h: hoteis){
                 if(cidade.toUpperCase().equals(h.getCidade().getNome().toUpperCase())) {
 
-                    List<Quarto> q = Controller.quartosDisponiveis(h,tipo, entrada, saida);
                     System.out.println(h.toString());
-                    Hotel hotel = h;
-                    double preco = Controller.calculaPreco(h,q.get(0),entrada,saida);
+                    Quarto q = Controller.quartoDisponivel(h,tipo, entrada, saida);
+
+
+                    double preco = Controller.calculaPreco(h,q,entrada,saida);
                     System.out.println("Preço: "+preco);
 
-                    System.out.println("Fazer reserva?(S/n)");
-                    String resp = ler.nextLine();
-                    if (!resp.equals("n"))
-                        Controller.fazerReserva(h,tipo,entrada,saida);
+                    Boolean v = Controller.fazerReserva(h,tipo,entrada,saida);
+                    System.out.println(v);
+                    h.toString();
                 }
             }
         }catch (Exception e){

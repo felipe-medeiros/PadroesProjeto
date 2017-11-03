@@ -6,19 +6,13 @@ import java.util.Date;
 import java.util.List;
 
 public class Quarto {
-    private int idreserva=0;
     private int id;
     private Tipo tipo;
-    public List<Reserva> reservas = new ArrayList<>();
+    private List<Reserva> reservas = new ArrayList<>();
 
     public Quarto(int id,Tipo tipo){
         this.id = id;
         this.tipo = tipo;
-    }
-
-    public void criarReserva(Date entrada,Date saida){
-        Reserva nova = new Reserva(++idreserva, entrada, saida, this);
-        this.reservas.add(nova);
     }
 
     public void adicionarReserva(Reserva reserva){

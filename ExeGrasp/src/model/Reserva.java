@@ -8,7 +8,7 @@ public class Reserva {
     private Date entrada;
     private Date saida;
 
-    public Reserva(int id,Date entrada,Date saida,Quarto quarto){
+    public Reserva(int id,Date entrada,Date saida){
         this.entrada = entrada;
         this.id = id;
         this.saida = saida;

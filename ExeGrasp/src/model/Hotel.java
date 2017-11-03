@@ -28,8 +28,8 @@ public class Hotel {
         valores.put(Tipo.PRESIDENCIAL,inicial*2);
     }
 
-    public void criarQuarto(int id){
-        switch (id){
+    public void criarQuarto(int tipo){
+        switch (tipo){
             case 1:
                 Quarto quarto1 = new Quarto(++idquarto,Tipo.SIMPLES);
                 quartos1.add(quarto1);
@@ -127,6 +127,10 @@ public class Hotel {
                 ", nome='" + nome + '\'' +
                 ", endereco='" + endereco + '\'' +
                 ", distancia=" + distancia +
+                ", quartos=" + quartos1 +
+//                ", quartos=" + quartos2 +
+//                ", quartos=" + quartos3 +
+//                ", quartos=" + quartos4 +
                 '}';
     }
 }
