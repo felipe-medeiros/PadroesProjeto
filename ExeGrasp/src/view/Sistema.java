@@ -1,7 +1,6 @@
 package view;
 
 import model.Hotel;
-import model.Cidade;
 import control.Controller;
 import model.Quarto;
 
@@ -20,33 +19,27 @@ public class Sistema {
         Scanner ler = new Scanner(System.in);
         String cidade,entrada,saida,consulta="",reserva="";
         double menor,maior;
-        int tipo, reserint=0;
+        int tipo;
 
         do {
             System.out.println("---- BuscOtel ----\n\n");
             System.out.println("Cidade: ");
-            //cidade = ler.nextLine();
-            cidade = "recife";
+            cidade = ler.nextLine();
 
             System.out.println("Data Entrada: ");
-            //entrada = ler.nextLine();
-            entrada = "01/02/2017";
+            entrada = ler.nextLine();
 
             System.out.println("Data Saída: ");
-            //saida = ler.nextLine();
-            saida = "05/02/2017";
+            saida = ler.nextLine();
 
             System.out.println("Tipo Quarto: Simples(1), Duplo(2), Triplo(3), Presidencial(4)");
-            //tipo = ler.nextInt();
-            tipo = 1;
+            tipo = ler.nextInt();
 
             System.out.println("Menor preço: ");
-            //menor = ler.nextDouble();
-            menor = 100;
+            menor = ler.nextDouble();
 
             System.out.println("Maior preço: ");
-            //maior = ler.nextDouble();
-            maior = 400;
+            maior = ler.nextDouble();
 
             List<Hotel> hoteislist = new ArrayList<>();
             List<Hotel> hoteis = Controller.obterHoteis(0);
