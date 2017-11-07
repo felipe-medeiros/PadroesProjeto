@@ -46,7 +46,6 @@ public class Quarto {
     @Override
     public String toString() {
         return "Quarto{" +
-                "id=" + id +
                 ", tipo=" + tipo +
                 ", reservas=" + reservas +
                 '}';

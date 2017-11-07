@@ -20,13 +20,13 @@ public abstract class Controller {
 
         Cidade joaopessoa = new Cidade(++idcidade,"Joao Pessoa");
         Cidade recife = new Cidade(++idcidade,"Recife");
-        Cidade maceio = new Cidade(++idcidade,"Maceio");
-        Cidade natal= new Cidade(++idcidade,"Natal");
+//        Cidade maceio = new Cidade(++idcidade,"Maceio");
+//        Cidade natal= new Cidade(++idcidade,"Natal");
 
         Hotel hotelTambau = new Hotel(joaopessoa,"Hotel Tambaú","Praia de Tambaú",5.5);
         Hotel hotelXenius = new Hotel(recife,"Xenius","Boa Viagem",7.5);
-        Hotel hotelPlazza = new Hotel(maceio,"Plazza","Centro",0.5);
-        Hotel hotelPalace = new Hotel(natal,"Palace","Praia do Forte",4.5);
+        Hotel hotelPlazza = new Hotel(recife,"Plazza","Centro",0.5);
+        Hotel hotelPalace = new Hotel(joaopessoa,"Palace","Praia do Forte",4.5);
 
         hoteis.add(hotelPalace);
         hoteis.add(hotelPlazza);
@@ -40,7 +40,7 @@ public abstract class Controller {
         }
 
         for (Hotel h: hoteis){
-            for (int j=0;j<10;j++){
+            for (int j=0;j<7;j++){
                 h.criarQuarto(j%3+1);
             }
         }
@@ -104,7 +104,7 @@ public abstract class Controller {
                 break;
         }
         Quarto quarto = null;
-        for (int i=0;quarto == null && quartos.size() < i;i++){
+        for (int i=0;quarto == null && quartos.get(i) != null;i++){
             quarto = verificaDisponibilidade(quartos.get(i),strentrada,strsaida);
         }
         return quarto;
@@ -131,13 +131,22 @@ public abstract class Controller {
         return null;
     }
 
-    public static void ordenar(){
+    public static void ordenar(int crit){
         List<Hotel> hotels = new ArrayList<>();
-        Collections.sort(hotels,new ComparaDist());
+        switch (crit){
+            case 1:
+                Collections.sort(hotels,new ComparaDist());
+            break;
+            case 2:
+                Collections.sort(hotels,new ComparaAva());
+            break;
+            default:
+                Collections.sort(hotels,new ComparaPreco());
+        }
     }
 
-    public static List<Hotel> obterHoteis(){
-        ordenar();
+    public static List<Hotel> obterHoteis(int crit){
+        ordenar(crit);
         return hoteis;
     }
 

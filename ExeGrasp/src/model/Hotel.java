@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Hotel {
     private int idquarto=0;
+    private double avaliacao=7;
     private Cidade cidade;
     private String nome;
     private String endereco;
@@ -118,6 +119,14 @@ public class Hotel {
 
     public void setQuartos4(List<Quarto> quartos4) {
         this.quartos4 = quartos4;
+    }
+
+    public double getAvaliacao() {
+        return avaliacao;
+    }
+
+    public void setAvaliacao(double avaliacao) {
+        this.avaliacao = avaliacao;
     }
 
     @Override
