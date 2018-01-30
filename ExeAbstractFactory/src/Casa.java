@@ -1,13 +1,13 @@
 public class Casa {
-    private String tipo;
+    private int tipo;
     private Sala sala;
     private Cozinha cozinha;
 
-    public String getTipo() {
+    public int getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(int tipo) {
         this.tipo = tipo;
     }
 

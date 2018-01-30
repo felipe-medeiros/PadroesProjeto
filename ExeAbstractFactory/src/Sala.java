@@ -9,7 +9,7 @@ public abstract class Sala {
     @Override
     public String toString() {
         return "Sala{" +
-                ", piso='" + piso + '\'' +
+                "piso='" + piso + '\'' +
                 ", parede='" + parede + '\'' +
                 ", porta='" + porta + '\'' +
                 ", tinta='" + tinta + '\'' +

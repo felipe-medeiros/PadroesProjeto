@@ -19,12 +19,4 @@ public class CasaBasico extends Casa {
     public void setCozinha(CozinhaBasico cozinha) {
         this.cozinha = cozinha;
     }
-
-    @Override
-    public String toString() {
-        return "CasaBasico{" +
-                "sala=" + sala +
-                ", cozinha=" + cozinha +
-                '}';
-    }
 }

@@ -1,9 +1,9 @@
 public class CasaBuilder implements Builder<CasaBuilder, Casa> {
-    private final String tipo;
+    private final int tipo;
     private Sala sala;
     private Cozinha cozinha;
 
-    public CasaBuilder(String tipo){
+    public CasaBuilder(int tipo){
         this.tipo = tipo;
     }
 
@@ -21,10 +21,24 @@ public class CasaBuilder implements Builder<CasaBuilder, Casa> {
 
     @Override
     public Casa criar() {
-        Casa c = new Casa();
+        Casa c;
+        switch (this.tipo){
+            case 3:
+                c = new CasaLuxo();
+            break;
+            case 2:
+                c = new CasaConforto();
+            break;
+            case 1:
+                c = new CasaBasico();
+            break;
+            default:
+                c = null;
+            break;
+        }
+        c.setTipo(this.tipo);
         c.setCozinha(this.cozinha);
         c.setSala(this.sala);
-        c.setTipo(this.tipo);
         return c;
     }
 }
